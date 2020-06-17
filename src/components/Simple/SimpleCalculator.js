@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Display from "./Display";
+import KeyPad from "./KeyPad";
 
 const Container = styled.div`
   display: flex;
@@ -15,6 +16,7 @@ export default class SimpleCalculator extends Component {
     return (
       <Container>
         <Display />
+        <KeyPad />
       </Container>
     );
   }
