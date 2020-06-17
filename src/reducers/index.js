@@ -1,7 +1,9 @@
 import { combineReducers } from "redux";
 
 const expressionEval = arr => {
-  return [];
+  const regex1 = /(\d+[%*/\+-]\d+)([%*/\+-]\d+\.*\d+)*/g;
+  if (arr.length === 1) return [...arr];
+  if (!regex1.test(arr.join(""))) return ["ERR"];
 };
 
 const calculate = (oldArr, input) => {
