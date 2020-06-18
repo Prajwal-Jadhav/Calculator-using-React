@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Button from "./Button";
+import { v4 as uuidv4 } from "uuid";
 
 const config = [
   "AC",
@@ -37,7 +38,7 @@ export default class KeyPad extends Component {
     return (
       <KeyContainer>
         {config.map(item => (
-          <Button content={item} />
+          <Button key={uuidv4()} content={item} />
         ))}
       </KeyContainer>
     );

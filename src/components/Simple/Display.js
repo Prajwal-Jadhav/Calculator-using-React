@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
 
 const DisplayContainer = styled.div`
   min-height: 50px;
@@ -43,7 +44,7 @@ class Display extends Component {
     return (
       <DisplayContainer>
         {this.props.displayArray.map(item => (
-          <DisplayItem className="display__item">
+          <DisplayItem key={uuidv4()} className="display__item">
             {this.renderDisplayItem(item)}
           </DisplayItem>
         ))}
