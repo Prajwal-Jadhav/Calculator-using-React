@@ -4,16 +4,16 @@ import { connect } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 
 const DisplayContainer = styled.div`
-  min-height: 50px;
+  min-height: 70px;
   padding: 15px 10px;
   text-align: right;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   letter-spacing: 1px;
-  font-size: 20px;
+  font-size: 25px;
   background-color: white;
-  border-bottom: 1px solid #999696;
+  border-bottom: 1.5px solid #d7d3d3;
 `;
 
 const DisplayItem = styled.div`

@@ -3,7 +3,8 @@ export const expressionEval = arr => {
 
   const regex1 = /(\d+[%*/+-]\d+)([%*/+-]\d+\.*\d+)*/g;
   if (expression.length === 1 || expression.length === 0) return [...arr];
-  if (!regex1.test(expression.join(""))) return ["ERR"];
+  console.log(expression.join(""));
+  if (!regex1.test(expression.join("").trim())) return ["ERR"];
 
   while (true) {
     let index = expression.findIndex(item => item === "/") - 1;
@@ -37,5 +38,5 @@ export const expressionEval = arr => {
     expression.splice(index, 0, result);
   }
 
-  return expression;
+  return Number.isNaN(expression[0]) ? ["ERR"] : expression;
 };
