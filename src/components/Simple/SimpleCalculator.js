@@ -6,9 +6,10 @@ import KeyPad from "./KeyPad";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  font-family: "Poppins", sans-serif;
   border: 2px solid black;
   width: 450px;
-  margin: 0px auto;
+  margin: 100px auto;
 `;
 
 export default class SimpleCalculator extends Component {

@@ -3,9 +3,16 @@ import styled from "styled-components";
 import { connect } from "react-redux";
 
 const DisplayContainer = styled.div`
-  width: 100%;
-  min-height: 30px;
+  min-height: 50px;
   padding: 15px 10px;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  letter-spacing: 1px;
+  font-size: 20px;
+  background-color: white;
+  border-bottom: 1px solid #999696;
 `;
 
 class Display extends Component {
