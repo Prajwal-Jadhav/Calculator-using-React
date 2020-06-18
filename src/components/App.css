@@ -2,3 +2,13 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.display__item .fas {
+  -webkit-text-stroke: 1px white;
+}
+
+.display__item .fa-plus,
+.display__item .fa-divide,
+.display__item .fa-minus {
+  font-size: 17px;
+}

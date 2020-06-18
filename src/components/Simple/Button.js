@@ -53,7 +53,7 @@ class Button extends Component {
             signed={true}
             onClick={() => this.props.buttonInput(this.props.content)}
           >
-            <i class="fas fa-minus"></i>
+            <i className="fas fa-minus"></i>
           </KeyButton>
         );
       case "%":

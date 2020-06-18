@@ -15,10 +15,39 @@ const DisplayContainer = styled.div`
   border-bottom: 1px solid #999696;
 `;
 
+const DisplayItem = styled.div`
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+`;
+
 class Display extends Component {
+  renderDisplayItem = item => {
+    switch (item) {
+      case "*":
+        return <i className="fas fa-times"></i>;
+      case "/":
+        return <i className="fas fa-divide"></i>;
+      case "+":
+        return <i className="fas fa-plus"></i>;
+      case "-":
+        return <i class="fas fa-minus"></i>;
+      case "%":
+        return <i className="fas fa-percentage"></i>;
+      default:
+        return item;
+    }
+  };
+
   render() {
     return (
-      <DisplayContainer>{this.props.displayArray.join("  ")}</DisplayContainer>
+      <DisplayContainer>
+        {this.props.displayArray.map(item => (
+          <DisplayItem className="display__item">
+            {this.renderDisplayItem(item)}
+          </DisplayItem>
+        ))}
+      </DisplayContainer>
     );
   }
 }
