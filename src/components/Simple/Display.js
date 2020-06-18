@@ -32,7 +32,7 @@ class Display extends Component {
       case "+":
         return <i className="fas fa-plus"></i>;
       case "-":
-        return <i class="fas fa-minus"></i>;
+        return <i className="fas fa-minus"></i>;
       case "%":
         return <i className="fas fa-percentage"></i>;
       default:
